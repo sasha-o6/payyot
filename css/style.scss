@@ -7,6 +7,8 @@ $blue: #395678;
 @import '../fonts/_fonts.scss';
 @import '_reset.scss';
 
+$container-margin: 1.667rem;
+
 html {
   font-size: 1.9999vh;
 }
@@ -17,14 +19,24 @@ body {
   font-family: 'Nexa', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  line-height: 130%;
+  line-height: 135%;
+
+  padding-left: $container-margin;
+  padding-right: $container-margin;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  > * {
+    flex-grow: 1;
+  }
 }
 
 header {
   text-align: center;
   margin-top: 2.8rem;
   margin-bottom: 5.6rem;
-  // max-width: ;
 
   svg {
     vertical-align: middle;
@@ -44,15 +56,13 @@ main {
   max-width: 65.9rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 h1 {
   margin-bottom: 2.8rem;
   font-size: 4rem;
   font-weight: 400;
-  line-height: 4.4rem;
+  line-height: 110%;
 }
 
 .button {
@@ -64,13 +74,12 @@ h1 {
   vertical-align: middle;
 
   font-size: 1.333rem;
-  line-height: 130%;
 
   svg {
     vertical-align: middle;
     margin-right: 0.56rem;
-    width: 1.667rem;
-    height: 1.667rem;
+    width: $container-margin;
+    height: $container-margin;
   }
 }
 
@@ -93,8 +102,10 @@ h1 {
     position: relative;
     z-index: 0;
 
-    margin-top: 5.6rem;
-    margin-bottom: 2.8rem;
+    margin-top: 2.8rem;
+    margin-bottom: 5.6rem;
+    margin-left: -$container-margin;
+    margin-right: -$container-margin;
 
     .svg-text {
       min-width: min(33.222rem, 75vw);
@@ -111,7 +122,7 @@ h1 {
 
   &-content {
     display: inline-block;
-    animation: marquee 13s linear infinite;
+    animation: marquee 16s linear infinite;
     height: 100%;
 
     svg {
@@ -121,48 +132,54 @@ h1 {
   }
 }
 
-footer.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 1.667rem;
-  padding: 1.667rem;
-  margin-bottom: 1.889rem;
-  background-color: #395678;
-  color: rgba($main-color, 0.65);
+footer {
+  .container {
+    flex-shrink: 0;
 
-  .right-side {
     display: flex;
-
     align-items: center;
-    flex-wrap: nowrap;
-    column-gap: 0.833rem;
+    justify-content: space-between;
+    border-radius: $container-margin;
+    padding: $container-margin;
+    margin-bottom: 1.889rem;
+    // margin-left: $container-margin;
+    // margin-right: $container-margin;
+    background-color: #395678;
+    color: rgba($main-color, 0.65);
 
-    .link-circle {
-      width: 2.222rem;
-      height: 2.222rem;
-      border: 0.056rem solid #7fd9d9;
-      border-radius: 100%;
+    .right-side {
       display: flex;
+
       align-items: center;
-      justify-content: center;
-      transition: 0.5s;
+      flex-wrap: nowrap;
+      column-gap: 0.833rem;
 
-      svg {
-        width: 1.111rem;
-        height: 1.111rem;
+      .link-circle {
+        width: 2.222rem;
+        height: 2.222rem;
+        border: 0.056rem solid #7fd9d9;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s background-color;
 
-        * {
-          transition: 0.5s;
+        svg {
+          width: 1.111rem;
+          height: 1.111rem;
+
+          * {
+            transition: 0.5s background-color;
+          }
         }
-      }
 
-      &:hover {
-        transition: 0.5s;
-        background-color: #7fd9d9;
+        &:hover {
+          transition: 0.5s background-color;
+          background-color: #7fd9d9;
 
-        path {
-          fill: #395678;
+          path {
+            fill: #395678;
+          }
         }
       }
     }
