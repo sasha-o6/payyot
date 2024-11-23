@@ -1,0 +1,66 @@
+@media screen and (max-width: 768px) {
+  // 2.667
+
+  .container {
+    padding-left: 1.667rem;
+    padding-right: 1.667rem;
+  }
+
+  header {
+    margin-top: 1.11rem;
+    margin-bottom: 6.389rem;
+    margin-bottom: 5.5rem;
+
+    svg {
+      max-width: 8.33rem;
+    }
+  }
+
+  h1 {
+    font-size: 2.67rem;
+    line-height: 2.933rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .marquee {
+    &-container {
+      margin-top: 2.778rem;
+      margin-bottom: 6.444rem;
+
+      .svg-text {
+        max-width: 14.5rem;
+        min-width: 14.5rem;
+      }
+    }
+  }
+
+  footer.container {
+    flex-direction: column;
+    row-gap: 1.111rem;
+    margin-left: 1.667rem;
+    margin-right: 1.667rem;
+    margin-bottom: 1.111rem;
+    padding: 1.111rem;
+
+    > p {
+      font-size: 0.889rem;
+      line-height: 1.2rem;
+    }
+
+    .right-side {
+      order: -1;
+      flex-wrap: wrap;
+      row-gap: 0.833rem;
+      column-gap: 0.833rem;
+      justify-content: center;
+      text-align: center;
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
