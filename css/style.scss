@@ -74,12 +74,19 @@ h1 {
   vertical-align: middle;
 
   font-size: 1.333rem;
+  transition: 0.5s background-color;
+  cursor: pointer;
 
   svg {
     vertical-align: middle;
     margin-right: 0.56rem;
     width: $container-margin;
     height: $container-margin;
+  }
+
+  &:hover {
+    transition: 0.5s background-color;
+    background-color: rgba($orange, 0.75);
   }
 }
 
