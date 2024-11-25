@@ -1,30 +1,54 @@
+@media screen and (min-width: 768px) {
+  .desktop-hide {
+    display: none !important;
+  }
+}
 @media screen and (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
+
   header {
     margin-top: 1.11rem;
     margin-bottom: 6.389rem;
     margin-bottom: 5.5rem;
 
     svg {
-      max-width: 8.33rem;
+      max-width: 5.944rem;
     }
   }
 
   h1 {
-    font-size: 2.67rem;
+    font-size: 2rem;
+    margin-bottom: 1.667rem;
+
+    br {
+      // display: none;
+    }
   }
 
   .button {
     width: 100%;
+    font-size: 1.111rem;
+
+    svg {
+      width: 1.111rem;
+      height: unset;
+      vertical-align: top;
+    }
   }
 
   .marquee {
     &-container {
-      margin-top: 2.778rem;
+      margin-top: 3.889rem;
       margin-bottom: 6.444rem;
 
       .svg-text {
         max-width: 14.5rem;
         min-width: 14.5rem;
+
+        padding-left: 0.889rem;
+        padding-right: 0.889rem;
       }
     }
   }
@@ -32,7 +56,7 @@
   footer {
     .container {
       flex-direction: column;
-      row-gap: 1.111rem;
+      row-gap: 0.833rem;
       margin-bottom: 1.111rem;
       padding: 1.111rem;
 
@@ -43,7 +67,7 @@
       .right-side {
         order: -1;
         flex-wrap: wrap;
-        row-gap: 0.833rem;
+        row-gap: 0.556rem;
         column-gap: 0.833rem;
         justify-content: center;
         text-align: center;
